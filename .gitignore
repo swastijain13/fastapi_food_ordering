@@ -1,0 +1,21 @@
+# Environment
+.venv
+
+#vs code
+.vscode/
+
+# OS files
+.DS_Store
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Python
+__pycache__/
+
+# Database 
+menu.db
+
+my.cnf
+
