@@ -30,6 +30,7 @@ A simple RESTful API for a food ordering system using FastAPI, SQLAlchemy, and M
 
 ```bash
 git clone https://github.com/swastijain13/fastapi_food_ordering.git
+cd fastapi_food_ordering
 ```
 
 ### 2. Create Virtual Environment
