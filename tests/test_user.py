@@ -111,37 +111,3 @@ def test_unauthenticated_user_cannot_access_order_history(client):
     assert response.status_code == 401
     assert response.json()["detail"] == "Not authenticated"
 
-
-
-# @pytest.mark.user
-# @pytest.mark.asyncio
-# async def test_view_order_history(authenticated_user_client):
-#     response = await authenticated_user_client.get("/orders/history")
-#     assert response.status_code == 200
-#     assert isinstance(response.json(), list)
-
-
-# @pytest.mark.user
-# @pytest.mark.parametrize("invalid_data", [
-#     {"quantity": 2},  # Missing menu_id
-#     {"menu_id": 1},  # Missing quantity
-#     {"menu_id": 1, "quantity": "two"},  # Invalid quantity type
-# ])
-# def test_place_order_invalid(client, invalid_data):
-#     response = client.post(
-#         "/order",
-#         json=invalid_data,
-#         headers={"Authorization": "Bearer user_token"},
-#     )
-#     assert response.status_code == 422
-
-
-# @pytest.mark.user
-# def test_cancel_order(client):
-#     client.post(
-#         "/order",
-#         json={"menu_id": 1, "quantity": 1},
-#         headers={"Authorization": "Bearer user_token"},
-#     )
-#     response = client.delete("/order/1", headers={"Authorization": "Bearer user_token"})
-#     assert response.status_code == 200
